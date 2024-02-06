@@ -21,7 +21,7 @@ getTrailDistancePromise('North Country')
   .then((foundTrail) => {      
     console.log(`The ${foundTrail.nickname
     } is ${foundTrail.miles
-    } miles long!01`);
+    } miles long!`);
 })
   .catch((error) => {
     console.log('Trail not found!', error);
