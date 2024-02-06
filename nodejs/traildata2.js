@@ -1,5 +1,5 @@
 // Require in trails module from trails.js
-const trails = require('./trails.js');
+const trails = require('../trails.json');
 // Require util module here!
 const util = require('util');
 
