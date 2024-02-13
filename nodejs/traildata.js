@@ -1,9 +1,8 @@
-// Require in trails module from trails.js
+// Grab data file
 const trails = require('./trails.json');
-// Require util module here!
+
 const util = require('util');
 
-// Simulate database call to search trails module for specified trail
 const getTrailDistance = (trail, callback) => {
   return setTimeout(() => {
     if (trails.hasOwnProperty(trail)) {    
@@ -14,9 +13,10 @@ const getTrailDistance = (trail, callback) => {
     }
   }, 1000);
 }
-// Promisfy below!
+// Build promise
 const getTrailDistancePromise = util.promisify(getTrailDistance);
 
+// Do the thing (expected vs. error)
 getTrailDistancePromise('North Country')
   .then((foundTrail) => {      
     console.log(`The ${foundTrail.nickname
