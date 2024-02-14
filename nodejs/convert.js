@@ -4,6 +4,9 @@ const trails = require('./trails.json');
 const { resolve } = require('path');
 const { rejects } = require('assert');
 
+// let CAR = "subaru";
+// const CAR2 = "honda";
+
 function getTrailDistance(trail) {
   const TrailPromise = new Promise((resolve, rejects) => {
     if (trails.hasOwnProperty(trail)) {    
@@ -22,6 +25,8 @@ getTrailDistance('North Country')
     console.log(`The ${foundTrail.nickname
     } is ${foundTrail.miles
     } miles long!`);
+    // console.log(CAR.length);
+    // console.log(CAR2);
 })
   .catch((error) => {
     console.log('Trail not found!', error);
