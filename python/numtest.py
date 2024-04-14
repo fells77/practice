@@ -3,7 +3,7 @@ import numpy as np
 def exclusion(arr1, arr2, arr3=None):
   # arr1 = [1,2,3,4,5]
   # arr2 = [1,2,5,5,5]
-  # arr3 = [2,2,3,4,5]
+  # arr3 = [2,2,3,4,1]
 
   ara = np.array(arr1)
   arb = np.array(arr2)
