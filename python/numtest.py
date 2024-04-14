@@ -27,7 +27,7 @@ def exclusion(arr1, arr2, arr3=None):
     exar = np.array([])
     size = len(ara)
 
-    # build combined array of matching values for arr1[] and arr2[]
+    # build exar[] of matching values from arr1[] and arr2[] with 'False' placeholders for non-matching positions
     i = 0
     while i < size:
       if compare[i] == True:
@@ -36,7 +36,7 @@ def exclusion(arr1, arr2, arr3=None):
         exar = np.append(exar, False)
       i += 1
     
-    # compare combined array with arr3[] to rm any matches
+    # build final[] with any value from exar[] that doesn't match arr3[] and isn't 'False'
     j = 0
     final = np.array([])
     while j < size:
