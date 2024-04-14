@@ -1,0 +1,3 @@
+# in-memory assets
+__pycache__
+*.pyc
