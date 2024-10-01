@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.List;
 
 
 class Array {
@@ -13,14 +13,25 @@ class Array {
         String password = input.nextLine();  
 
         // convert user input (str) to array
-        char[] charArray = password.toCharArray();
-        Character[] charObjectArray = ArrayUtils.toObject(charArray);
+        List<Character> arrayList = new ArrayList<>();
+        // this is a "for each" loop
+        for(char ch : password.toCharArray()){
+            arrayList.add(ch);
+        }
         
         // print original password
-        System.out.println("Original: " + passArray);
+        System.out.println("Original: " + password);
 
-        // shuff the password and print
-        Collections.shuffle(passArray);
-        System.out.println("Random: " + passArray);
+        // shuffle the password
+        Collections.shuffle(arrayList);
+
+        // god i hate java.  create new string and then iterate through the shuffled arrayList and append to the string
+        // building a new string vs. just printing the results one char at a time to preserve sanity later (trust me)
+        String shuffledPass = "";
+        System.out.print("Shuffled: "); // if you don't use "println" it won't line-break; that's all it does
+        for(int i=0; i<arrayList.size(); i++){
+            shuffledPass = shuffledPass + arrayList.get(i);
+        }
+        System.out.println(shuffledPass);
     }       
 }
