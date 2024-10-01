@@ -1,3 +1,5 @@
+// Converts array values to string for concatenation
+
 class ToString {
     public static void main(String[] args){
         // no toString() -- adds int values instead of concatenating

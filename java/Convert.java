@@ -1,3 +1,5 @@
+// Capitalizes the first letter of an entered string
+
 import java.util.Scanner;
 
 class Convert {
