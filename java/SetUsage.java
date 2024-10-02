@@ -1,5 +1,5 @@
 // Problem statement:
-//     I'm having a party and invited 40 friends.  I have a list of 10 items that I've requested be brought by my guests,
+//     I'm having a party and invited 20 friends.  I have a list of 10 items that I've requested be brought by my guests,
 //     each has been assigned a <key:value> pair as below:
 
 //     1   :   potato chips
@@ -23,8 +23,9 @@ import java.util.Set;
 class SetUsage {
     public static void main(String args[]) {
         ArrayList<Integer> values = new ArrayList<Integer>();
-        for(int i=0; i<40; i++){
-            int rand = (int)(Math.random() * 20 + 1);
+        int maxItems = 10; // if you use a single value more than once (2), assign it to a var
+        for(int i=0; i<20; i++){
+            int rand = (int)(Math.random() * maxItems + 1);
             values.add(rand);
         }
     // System.out.println(values);
@@ -37,6 +38,6 @@ class SetUsage {
 
     System.out.println("Here are the items that are being brought:");
     System.out.println(set);
-    System.out.println("I'm missing " + (20 - set.size()) + " items");
+    System.out.println("I'm missing " + (maxItems - set.size()) + " items");
     }
 }
