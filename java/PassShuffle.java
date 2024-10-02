@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-class Array {
+class PassShuffle {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
